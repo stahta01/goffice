@@ -51,13 +51,13 @@ running_under_buggy_valgrind (void)
 	 * finitel fails.  Perform alternate tests.
 	 */
 
-	if (!(go_pinfl > DBL_MAX && !isnanl (go_pinfl) && isnanl (go_pinfl - go_pinfl)))
+	if (!(go_pinfl > DBL_MAX && !__isnanl (go_pinfl) && __isnanl (go_pinfl - go_pinfl)))
 		return FALSE;
 
-	if (!(-go_ninfl > DBL_MAX && !isnanl (go_ninfl) && isnanl (go_ninfl - go_ninfl)))
+	if (!(-go_ninfl > DBL_MAX && !__isnanl (go_ninfl) && __isnanl (go_ninfl - go_ninfl)))
 		return FALSE;
 
-	if (!isnanl (go_nanl) && !(go_nanl >= 0) && !(go_nanl <= 0))
+	if (!__isnanl (go_nanl) && !(go_nanl >= 0) && !(go_nanl <= 0))
 		return FALSE;
 
 	/* finitel must be hosed.  Blame valgrind.  */
@@ -158,7 +158,7 @@ _go_math_init (void)
 	go_nanl = go_nan;
 	go_pinfl = go_pinf;
 	go_ninfl = go_ninf;
-	if (!(isnanl (go_nanl) &&
+	if (!(__isnanl (go_nanl) &&
 	      go_pinfl > 0 && !go_finitel (go_pinfl) &&
 	      go_ninfl < 0 && !go_finitel (go_ninfl))) {
 		if (running_under_buggy_valgrind ()) {
@@ -805,7 +805,7 @@ strtold (char const *str, char **end)
 long double
 modfl (long double x, long double *iptr)
 {
-	if (isnanl (x))
+	if (__isnanl (x))
 		return *iptr = x;
 	else if (go_finitel (x)) {
 		if (x >= 0)

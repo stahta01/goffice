@@ -1248,7 +1248,7 @@ DOUBLE SUFFIX (go_pcauchy) (DOUBLE x, DOUBLE location, DOUBLE scale,
     if (scale <= 0) ML_ERR_return_NAN;
 
     x = (x - location) / scale;
-    if (SUFFIX (isnan) (x)) ML_ERR_return_NAN;
+    if (SUFFIX (__isnan) (x)) ML_ERR_return_NAN;
 #ifdef IEEE_754
     if(!SUFFIX (go_finite)(x)) {
 	if(x < 0) return R_DT_0;
