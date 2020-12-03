@@ -476,10 +476,10 @@ libgoffice_@GOFFICE_API_VER@_la_LIBADD = 			\
 	$(GOFFICE_LIBS)	\
 	$(GTK_MAC_LIBS)
 
-libgoffice_@GOFFICE_API_VER@_la_LDFLAGS = -version-info $(VERSION_INFO)
-if WITH_WIN32
+libgoffice_@GOFFICE_API_VER@_la_LDFLAGS = -version-info $(VERSION_INFO) -no-undefined
+if WITH_NATIVE_WIN32
 libgoffice_@GOFFICE_API_VER@_la_DEPENDENCIES = goffice.def
-libgoffice_@GOFFICE_API_VER@_la_LDFLAGS += -no-undefined -export-symbols goffice.def
+libgoffice_@GOFFICE_API_VER@_la_LDFLAGS += -export-symbols goffice.def
 endif
 
 BUILT_SOURCES +=	goffice-paths.h embedded-stuff.c
@@ -564,7 +564,7 @@ ALL_HDRS += \
 endif
 
 
-if WITH_WIN32
+if WITH_NATIVE_WIN32
 LIB_PUBLIC_HDRS = $(libgoffice_@GOFFICE_API_VER@_la_HEADERS)
 
 
