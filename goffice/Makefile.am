@@ -479,7 +479,7 @@ libgoffice_@GOFFICE_API_VER@_la_LIBADD = 			\
 libgoffice_@GOFFICE_API_VER@_la_LDFLAGS = -version-info $(VERSION_INFO) -no-undefined
 if WITH_NATIVE_WIN32
 libgoffice_@GOFFICE_API_VER@_la_DEPENDENCIES = goffice.def
-libgoffice_@GOFFICE_API_VER@_la_LDFLAGS += -export-symbols goffice.def
+libgoffice_@GOFFICE_API_VER@_la_LDFLAGS += -Wl,--allow-multiple-definition -export-symbols goffice.def
 endif
 
 BUILT_SOURCES +=	goffice-paths.h embedded-stuff.c
