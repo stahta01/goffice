@@ -40,29 +40,29 @@ app_SOURCES =					\
 
 appdir = $(goffice_include_dir)/app
 app_api_headers =				\
-	app/goffice-app.h			\
+	$(top_srcdir)/goffice/app/goffice-app.h			\
 						\
-	app/go-doc.h				\
-	app/go-doc-impl.h			\
-	app/go-doc-control.h			\
-	app/go-doc-control-impl.h		\
-	app/go-view.h				\
-	app/go-plugin.h				\
-	app/go-plugin-loader.h			\
-	app/go-plugin-loader-module.h		\
-	app/go-plugin-service.h			\
-	app/go-plugin-service-impl.h		\
-	app/file.h				\
-	app/error-info.h			\
-	app/io-context.h			\
-	app/io-context-priv.h			\
-	app/go-cmd-context.h			\
-	app/go-cmd-context-impl.h		\
-	app/go-conf.h
+	$(top_srcdir)/goffice/app/go-doc.h				\
+	$(top_srcdir)/goffice/app/go-doc-impl.h			\
+	$(top_srcdir)/goffice/app/go-doc-control.h			\
+	$(top_srcdir)/goffice/app/go-doc-control-impl.h		\
+	$(top_srcdir)/goffice/app/go-view.h				\
+	$(top_srcdir)/goffice/app/go-plugin.h				\
+	$(top_srcdir)/goffice/app/go-plugin-loader.h			\
+	$(top_srcdir)/goffice/app/go-plugin-loader-module.h		\
+	$(top_srcdir)/goffice/app/go-plugin-service.h			\
+	$(top_srcdir)/goffice/app/go-plugin-service-impl.h		\
+	$(top_srcdir)/goffice/app/file.h				\
+	$(top_srcdir)/goffice/app/error-info.h			\
+	$(top_srcdir)/goffice/app/io-context.h			\
+	$(top_srcdir)/goffice/app/io-context-priv.h			\
+	$(top_srcdir)/goffice/app/go-cmd-context.h			\
+	$(top_srcdir)/goffice/app/go-cmd-context-impl.h		\
+	$(top_srcdir)/goffice/app/go-conf.h
 
 app_HEADERS = 	\
 	$(app_api_headers) \
-	app/module-plugin-defs.h
+	$(top_srcdir)/goffice/app/module-plugin-defs.h
 
 # This list should be empty when we reach a stable phase.
 app_UNUSED = \
@@ -107,27 +107,27 @@ canvas_gtk_SOURCES= \
 
 canvasdir = $(goffice_include_dir)/canvas
 canvas_HEADERS =	\
-	canvas/goc-arc.h		\
-	canvas/goc-canvas.h		\
-	canvas/goc-circle.h		\
-	canvas/goc-component.h		\
-	canvas/goc-ellipse.h		\
-	canvas/goc-graph.h		\
-	canvas/goc-group.h		\
-	canvas/goc-item.h		\
-	canvas/goc-image.h		\
-	canvas/goc-line.h		\
-	canvas/goc-path.h		\
-	canvas/goc-pixbuf.h		\
-	canvas/goc-polyline.h		\
-	canvas/goc-polygon.h		\
-	canvas/goc-rectangle.h		\
-	canvas/goc-structs.h		\
-	canvas/goc-styled-item.h	\
-	canvas/goc-text.h		\
-	canvas/goc-utils.h		\
-	canvas/goc-widget.h		\
-	canvas/goffice-canvas.h
+	$(top_srcdir)/goffice/canvas/goc-arc.h		\
+	$(top_srcdir)/goffice/canvas/goc-canvas.h		\
+	$(top_srcdir)/goffice/canvas/goc-circle.h		\
+	$(top_srcdir)/goffice/canvas/goc-component.h		\
+	$(top_srcdir)/goffice/canvas/goc-ellipse.h		\
+	$(top_srcdir)/goffice/canvas/goc-graph.h		\
+	$(top_srcdir)/goffice/canvas/goc-group.h		\
+	$(top_srcdir)/goffice/canvas/goc-item.h		\
+	$(top_srcdir)/goffice/canvas/goc-image.h		\
+	$(top_srcdir)/goffice/canvas/goc-line.h		\
+	$(top_srcdir)/goffice/canvas/goc-path.h		\
+	$(top_srcdir)/goffice/canvas/goc-pixbuf.h		\
+	$(top_srcdir)/goffice/canvas/goc-polyline.h		\
+	$(top_srcdir)/goffice/canvas/goc-polygon.h		\
+	$(top_srcdir)/goffice/canvas/goc-rectangle.h		\
+	$(top_srcdir)/goffice/canvas/goc-structs.h		\
+	$(top_srcdir)/goffice/canvas/goc-styled-item.h	\
+	$(top_srcdir)/goffice/canvas/goc-text.h		\
+	$(top_srcdir)/goffice/canvas/goc-utils.h		\
+	$(top_srcdir)/goffice/canvas/goc-widget.h		\
+	$(top_srcdir)/goffice/canvas/goffice-canvas.h
 
 #####################################
 # component directory files
@@ -139,10 +139,10 @@ component_SOURCES =				\
 
 componentdir = $(goffice_include_dir)/component
 component_HEADERS =				\
-	component/goffice-component.h		\
-	component/go-component.h		\
-	component/go-component-factory.h	\
-	component/go-component-mime-dialog.h
+	$(top_srcdir)/goffice/component/goffice-component.h		\
+	$(top_srcdir)/goffice/component/go-component.h		\
+	$(top_srcdir)/goffice/component/go-component-factory.h	\
+	$(top_srcdir)/goffice/component/go-component-mime-dialog.h
 
 #####################################
 # data directory files
@@ -153,10 +153,10 @@ data_SOURCES =	\
 
 go_datadir = $(goffice_include_dir)/data
 go_data_HEADERS =				\
-	data/goffice-data.h			\
-	data/go-data.h				\
-	data/go-data-impl.h			\
-	data/go-data-simple.h
+	$(top_srcdir)/goffice/data/goffice-data.h			\
+	$(top_srcdir)/goffice/data/go-data.h				\
+	$(top_srcdir)/goffice/data/go-data-impl.h			\
+	$(top_srcdir)/goffice/data/go-data-simple.h
 
 #####################################
 # graph directory files
@@ -209,51 +209,51 @@ graph_lasem_SOURCES = \
 
 graphdir = $(goffice_include_dir)/graph
 graph_HEADERS =					\
-	graph/goffice-graph.h			\
-	graph/gog-object.h			\
-	graph/gog-object-xml.h			\
-	graph/gog-styled-object.h		\
-	graph/gog-outlined-object.h		\
-	graph/gog-view.h			\
-	graph/gog-graph.h			\
-	graph/gog-graph-impl.h			\
-	graph/gog-chart.h			\
-	graph/gog-chart-impl.h			\
-	graph/gog-chart-map.h			\
-	graph/gog-chart-map-3d.h		\
-	graph/gog-3d-box.h			\
-	graph/gog-axis.h			\
-	graph/gog-axis-line.h			\
-	graph/gog-axis-color-map.h		\
-	graph/gog-legend.h			\
-	graph/gog-color-scale.h			\
-	graph/gog-label.h			\
-	graph/gog-grid.h			\
-	graph/gog-grid-line.h			\
-	graph/gog-theme.h			\
-	graph/gog-plot.h			\
-	graph/gog-plot-impl.h			\
-	graph/gog-plot-engine.h			\
-	graph/gog-series.h			\
-	graph/gog-series-impl.h			\
-	graph/gog-error-bar.h			\
-	graph/gog-trend-line.h			\
-	graph/gog-reg-curve.h			\
-	graph/gog-smoothed-curve.h		\
-	graph/gog-series-labels.h		\
-	graph/gog-series-lines.h		\
-	graph/gog-data-set.h			\
-	graph/gog-renderer.h
+	$(top_srcdir)/goffice/graph/goffice-graph.h			\
+	$(top_srcdir)/goffice/graph/gog-object.h			\
+	$(top_srcdir)/goffice/graph/gog-object-xml.h			\
+	$(top_srcdir)/goffice/graph/gog-styled-object.h		\
+	$(top_srcdir)/goffice/graph/gog-outlined-object.h		\
+	$(top_srcdir)/goffice/graph/gog-view.h			\
+	$(top_srcdir)/goffice/graph/gog-graph.h			\
+	$(top_srcdir)/goffice/graph/gog-graph-impl.h			\
+	$(top_srcdir)/goffice/graph/gog-chart.h			\
+	$(top_srcdir)/goffice/graph/gog-chart-impl.h			\
+	$(top_srcdir)/goffice/graph/gog-chart-map.h			\
+	$(top_srcdir)/goffice/graph/gog-chart-map-3d.h		\
+	$(top_srcdir)/goffice/graph/gog-3d-box.h			\
+	$(top_srcdir)/goffice/graph/gog-axis.h			\
+	$(top_srcdir)/goffice/graph/gog-axis-line.h			\
+	$(top_srcdir)/goffice/graph/gog-axis-color-map.h		\
+	$(top_srcdir)/goffice/graph/gog-legend.h			\
+	$(top_srcdir)/goffice/graph/gog-color-scale.h			\
+	$(top_srcdir)/goffice/graph/gog-label.h			\
+	$(top_srcdir)/goffice/graph/gog-grid.h			\
+	$(top_srcdir)/goffice/graph/gog-grid-line.h			\
+	$(top_srcdir)/goffice/graph/gog-theme.h			\
+	$(top_srcdir)/goffice/graph/gog-plot.h			\
+	$(top_srcdir)/goffice/graph/gog-plot-impl.h			\
+	$(top_srcdir)/goffice/graph/gog-plot-engine.h			\
+	$(top_srcdir)/goffice/graph/gog-series.h			\
+	$(top_srcdir)/goffice/graph/gog-series-impl.h			\
+	$(top_srcdir)/goffice/graph/gog-error-bar.h			\
+	$(top_srcdir)/goffice/graph/gog-trend-line.h			\
+	$(top_srcdir)/goffice/graph/gog-reg-curve.h			\
+	$(top_srcdir)/goffice/graph/gog-smoothed-curve.h		\
+	$(top_srcdir)/goffice/graph/gog-series-labels.h		\
+	$(top_srcdir)/goffice/graph/gog-series-lines.h		\
+	$(top_srcdir)/goffice/graph/gog-data-set.h			\
+	$(top_srcdir)/goffice/graph/gog-renderer.h
 
 graph_gtkdir = $(goffice_include_dir)/graph
 graph_gtk_HEADERS =				\
-	graph/gog-guru.h			\
-	graph/gog-data-allocator.h		\
-	graph/gog-child-button.h
+	$(top_srcdir)/goffice/graph/gog-guru.h			\
+	$(top_srcdir)/goffice/graph/gog-data-allocator.h		\
+	$(top_srcdir)/goffice/graph/gog-child-button.h
 
 graph_lasemdir = $(goffice_include_dir)/graph
 graph_lasem_HEADERS = \
-	graph/gog-equation.h
+	$(top_srcdir)/goffice/graph/gog-equation.h
 
 noinst_HEADERS += \
 	graph/gog-axis-line-impl.h
@@ -300,41 +300,41 @@ gtk_SOURCES =					\
 
 gtkdir = $(goffice_include_dir)/gtk
 gtk_HEADERS =					\
-	gtk/goffice-gtk.h			\
+	$(top_srcdir)/goffice/gtk/goffice-gtk.h			\
 						\
-	gtk/go-font-sel.h			\
-	gtk/go-font-sel-dialog.h		\
-	gtk/go-format-sel.h			\
-	gtk/go-rotation-sel.h			\
-	gtk/go-charmap-sel.h			\
-	gtk/go-locale-sel.h			\
-	gtk/go-3d-rotation-sel.h		\
-	gtk/go-arrow-sel.h			\
+	$(top_srcdir)/goffice/gtk/go-font-sel.h			\
+	$(top_srcdir)/goffice/gtk/go-font-sel-dialog.h		\
+	$(top_srcdir)/goffice/gtk/go-format-sel.h			\
+	$(top_srcdir)/goffice/gtk/go-rotation-sel.h			\
+	$(top_srcdir)/goffice/gtk/go-charmap-sel.h			\
+	$(top_srcdir)/goffice/gtk/go-locale-sel.h			\
+	$(top_srcdir)/goffice/gtk/go-3d-rotation-sel.h		\
+	$(top_srcdir)/goffice/gtk/go-arrow-sel.h			\
 						\
-	gtk/go-optionmenu.h			\
-	gtk/go-combo-box.h			\
-	gtk/go-color-group.h			\
-	gtk/go-color-palette.h			\
-	gtk/go-combo-color.h			\
-	gtk/go-combo-pixmaps.h			\
+	$(top_srcdir)/goffice/gtk/go-optionmenu.h			\
+	$(top_srcdir)/goffice/gtk/go-combo-box.h			\
+	$(top_srcdir)/goffice/gtk/go-color-group.h			\
+	$(top_srcdir)/goffice/gtk/go-color-palette.h			\
+	$(top_srcdir)/goffice/gtk/go-combo-color.h			\
+	$(top_srcdir)/goffice/gtk/go-combo-pixmaps.h			\
 						\
-	gtk/go-action-combo-color.h		\
-	gtk/go-action-combo-pixmaps.h		\
-	gtk/go-action-combo-stack.h		\
-	gtk/go-action-combo-text.h		\
+	$(top_srcdir)/goffice/gtk/go-action-combo-color.h		\
+	$(top_srcdir)/goffice/gtk/go-action-combo-pixmaps.h		\
+	$(top_srcdir)/goffice/gtk/go-action-combo-stack.h		\
+	$(top_srcdir)/goffice/gtk/go-action-combo-text.h		\
 						\
-	gtk/go-calendar-button.h		\
-	gtk/go-palette.h			\
-	gtk/go-selector.h			\
-	gtk/go-color-selector.h			\
-	gtk/go-gradient-selector.h		\
-	gtk/go-line-selector.h			\
-	gtk/go-marker-selector.h		\
-	gtk/go-pattern-selector.h		\
+	$(top_srcdir)/goffice/gtk/go-calendar-button.h		\
+	$(top_srcdir)/goffice/gtk/go-palette.h			\
+	$(top_srcdir)/goffice/gtk/go-selector.h			\
+	$(top_srcdir)/goffice/gtk/go-color-selector.h			\
+	$(top_srcdir)/goffice/gtk/go-gradient-selector.h		\
+	$(top_srcdir)/goffice/gtk/go-line-selector.h			\
+	$(top_srcdir)/goffice/gtk/go-marker-selector.h		\
+	$(top_srcdir)/goffice/gtk/go-pattern-selector.h		\
 						\
-	gtk/go-graph-widget.h			\
-	gtk/go-image-sel.h				\
-	gtk/go-math-editor.h
+	$(top_srcdir)/goffice/gtk/go-graph-widget.h			\
+	$(top_srcdir)/goffice/gtk/go-image-sel.h				\
+	$(top_srcdir)/goffice/gtk/go-math-editor.h
 
 #####################################
 # maths directory files
@@ -356,20 +356,20 @@ math_SOURCES =					\
 
 mathdir = $(goffice_include_dir)/math
 math_HEADERS =					\
-	math/goffice-math.h			\
-	math/go-accumulator.h			\
-	math/go-dtoa.h				\
-	math/go-math.h				\
-	math/go-rangefunc.h			\
-	math/go-regression.h			\
-	math/go-cspline.h			\
-	math/go-complex.h			\
-	math/go-fft.h				\
-	math/go-matrix.h			\
-	math/go-matrix3x3.h			\
-	math/go-quad.h				\
-	math/go-R.h				\
-	math/go-distribution.h
+	$(top_srcdir)/goffice/math/goffice-math.h			\
+	$(top_srcdir)/goffice/math/go-accumulator.h			\
+	$(top_srcdir)/goffice/math/go-dtoa.h				\
+	$(top_srcdir)/goffice/math/go-math.h				\
+	$(top_srcdir)/goffice/math/go-rangefunc.h			\
+	$(top_srcdir)/goffice/math/go-regression.h			\
+	$(top_srcdir)/goffice/math/go-cspline.h			\
+	$(top_srcdir)/goffice/math/go-complex.h			\
+	$(top_srcdir)/goffice/math/go-fft.h				\
+	$(top_srcdir)/goffice/math/go-matrix.h			\
+	$(top_srcdir)/goffice/math/go-matrix3x3.h			\
+	$(top_srcdir)/goffice/math/go-quad.h				\
+	$(top_srcdir)/goffice/math/go-R.h				\
+	$(top_srcdir)/goffice/math/go-distribution.h
 
 #####################################
 # utils directory files
@@ -416,41 +416,41 @@ utils_SOURCES =					\
 
 utilsdir = $(goffice_include_dir)/utils
 utils_HEADERS =					\
-	utils/goffice-utils.h			\
-	utils/go-cairo.h			\
-	utils/go-color.h			\
-	utils/go-file.h				\
-	utils/go-font.h				\
-	utils/go-gradient.h			\
-	utils/go-image.h			\
-	utils/go-pixbuf.h			\
-	utils/go-svg.h				\
-	utils/go-emf.h				\
-	utils/go-spectre.h			\
-	utils/go-line.h				\
-	utils/go-locale.h			\
-	utils/go-marker.h			\
-	utils/go-mml-to-itex.h		\
-	utils/go-path.h				\
-	utils/go-pattern.h			\
-	utils/go-unit.h				\
-	utils/go-units.h			\
-	utils/go-geometry.h			\
-	utils/go-string.h			\
-	utils/go-undo.h				\
-	utils/datetime.h			\
-	utils/go-format.h			\
-	utils/regutf8.h				\
-	utils/go-glib-extras.h			\
-	utils/go-libxml-extras.h		\
-	utils/go-pango-extras.h			\
-	utils/go-gdk-pixbuf.h			\
-	utils/go-persist.h			\
-	utils/go-bezier.h			\
-	utils/go-editor.h			\
-	utils/go-rsm.h				\
-	utils/go-style.h			\
-	utils/go-styled-object.h
+	$(top_srcdir)/goffice/utils/goffice-utils.h			\
+	$(top_srcdir)/goffice/utils/go-cairo.h			\
+	$(top_srcdir)/goffice/utils/go-color.h			\
+	$(top_srcdir)/goffice/utils/go-file.h				\
+	$(top_srcdir)/goffice/utils/go-font.h				\
+	$(top_srcdir)/goffice/utils/go-gradient.h			\
+	$(top_srcdir)/goffice/utils/go-image.h			\
+	$(top_srcdir)/goffice/utils/go-pixbuf.h			\
+	$(top_srcdir)/goffice/utils/go-svg.h				\
+	$(top_srcdir)/goffice/utils/go-emf.h				\
+	$(top_srcdir)/goffice/utils/go-spectre.h			\
+	$(top_srcdir)/goffice/utils/go-line.h				\
+	$(top_srcdir)/goffice/utils/go-locale.h			\
+	$(top_srcdir)/goffice/utils/go-marker.h			\
+	$(top_srcdir)/goffice/utils/go-mml-to-itex.h		\
+	$(top_srcdir)/goffice/utils/go-path.h				\
+	$(top_srcdir)/goffice/utils/go-pattern.h			\
+	$(top_srcdir)/goffice/utils/go-unit.h				\
+	$(top_srcdir)/goffice/utils/go-units.h			\
+	$(top_srcdir)/goffice/utils/go-geometry.h			\
+	$(top_srcdir)/goffice/utils/go-string.h			\
+	$(top_srcdir)/goffice/utils/go-undo.h				\
+	$(top_srcdir)/goffice/utils/datetime.h			\
+	$(top_srcdir)/goffice/utils/go-format.h			\
+	$(top_srcdir)/goffice/utils/regutf8.h				\
+	$(top_srcdir)/goffice/utils/go-glib-extras.h			\
+	$(top_srcdir)/goffice/utils/go-libxml-extras.h		\
+	$(top_srcdir)/goffice/utils/go-pango-extras.h			\
+	$(top_srcdir)/goffice/utils/go-gdk-pixbuf.h			\
+	$(top_srcdir)/goffice/utils/go-persist.h			\
+	$(top_srcdir)/goffice/utils/go-bezier.h			\
+	$(top_srcdir)/goffice/utils/go-editor.h			\
+	$(top_srcdir)/goffice/utils/go-rsm.h				\
+	$(top_srcdir)/goffice/utils/go-style.h			\
+	$(top_srcdir)/goffice/utils/go-styled-object.h
 
 # A hint is needed to build the header first:
 BUILT_SOURCES = utils/go-marshalers.h
@@ -543,7 +543,7 @@ goffice-paths.h: Makefile
 
 include $(top_srcdir)/goffice.mk
 
-ALL_HDRS = goffice.h $(app_HEADERS) \
+ALL_HDRS = $(top_srcdir)/goffice/goffice.h $(app_HEADERS) \
 	$(canvas_HEADERS) \
 	$(go_data_HEADERS) \
 	$(graph_HEADERS) \
